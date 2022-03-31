@@ -1,0 +1,210 @@
+@import "@/common/color.less";
+
+/*markdown */
+.article-input{
+  /* 整个控件 */ 
+  .v-note-wrapper.markdown-body.mavonEditor.shadow{    
+    background:transparent;
+    /*工具栏*/
+    // .v-note-op{
+      
+    //   /*左侧工具栏*/
+    //   // .v-left-item.transition{
+    //   //   // background:rgba(rgb(20,23,24,0))!important;
+
+    //   // }
+    //   // /*右侧工具栏*/ 
+    //   // .v-right-item.transition{
+    //   //   // background:rgba(20, 23, 24, 0.6)!important;
+    //   // }
+    // }
+    /* 编辑区和显示区 */
+    .v-note-panel{
+      /*编辑区 */
+      background:rgba(20, 23, 24, 0.6);
+      .v-note-edit.divarea-wrapper.scroll-style.transition{
+        box-shadow: 0 0px 12px 0 @blackColor;
+        background:transparent!important;
+        /* 已编辑区域 */
+        .content-input-wrapper{
+          
+          background-color:transparent !important;
+          .auto-textarea-wrapper.content-input{
+            background-color:transparent!important;
+            
+            .auto-textarea-input{
+                background-color:transparent!important;
+                color:rgba(255,255,255, 0.9);
+                
+              }
+          }
+        }
+      }
+      .v-note-show{
+        border-left: 2px solid rgba(255,255,255, 0.7);
+        color :rgba(255,255,255, 0.9);
+        font-size: 25px;
+        line-height: 1.5;
+        font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+        .v-show-content.scroll-style.scroll-style-border-radius{
+            background:transparent!important;
+        }
+      }
+    }
+  }
+
+}
+
+.category-input{
+  .el-select-dropdown__item.hover,
+  .el-select-dropdown__item:hover{
+    background-color:transparent!important;
+    color:#409eff;
+    height: 40px;
+    font-size:20px;
+    text-align: center;
+  }
+  .el-select-dropdown__item{
+      background-color:transparent!important;
+      color: white;
+                
+      height: 40px;
+      font-size:20px;
+      text-align: center;
+  }
+
+  .el-input__inner{
+      background-color:transparent!important;
+      box-shadow: 0 2px 12px 0 @blackColor;
+      border: 0;
+      color: white;
+      text-align: center;
+      height: 50px;
+      font-size:20px;
+  }
+  .category-input,.el-select-dropdown__empty {
+    background: rgb(20 23 24 / 38%) !important;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    color: #dcdfe6;
+    font-size: 14px;
+  }
+  .el-select-dropdown.el-popper{
+        background:transparent!important;
+        border: 0;
+  }
+  .popper__arrow{
+    display: none;
+  }
+}
+
+.upload-box{
+  position:absolute;
+  left:760px;
+  width: 500px;
+  .upload{
+  position: absolute;
+  
+  .el-upload.el-upload--picture-card{
+    left:350px;
+    position: absolute!important;
+    background-color: transparent;
+    border: 0;
+    top: 50px;
+    .el-button.el-button--primary.el-button--medium{
+        
+        
+        margin-bottom: 40px;
+        width : 200px;
+        display: flex;
+        // border-radius: 10px;
+        // border: 0.5px solid @whiteColor4;
+        transition: 0.5s all;
+        font-weight: 100;
+        font-size: 1.3rem;
+        color: black;
+    }
+  }
+  .el-upload-list.el-upload-list--picture-card{
+    position: absolute;
+    top:10px;
+    left: 0px;
+    // border: 0;
+    // background: rgba(20, 23, 24, 0.8);
+    .el-upload-list__item.is-ready,
+    .el-upload-list__item.is-success{
+      border: 0;
+      box-shadow: 0 2px 12px 0 @blackColor;
+      background-color: transparent;
+      width: 256px;
+      height: 256px;
+      .el-upload-list__item-thumbnail{
+        width: 256px;
+        height: 256px;
+      }
+      .el-upload-list__item-name.el-icon-document{
+        display: none;
+      }
+    }
+  }
+}
+}
+
+
+.submit-btn{
+  position: absolute;
+  
+
+  top: 1186px;
+  left:1200px;
+
+  // background-color: #DCDCDC;
+  height: 50px;
+  margin-bottom: 40px;
+  width : 120px;
+  display: flex;
+  // border-radius: 10px;
+  // border: 0.5px solid @whiteColor4;
+  transition: 0.5s all;
+  font-weight: 100;
+  font-size: 1.3rem;
+  color: black;
+  text-align: center;
+}
+
+.save-btn{
+  position: absolute;
+  height: 50px;
+  margin-bottom: 40px;
+  width : 120px;
+  display: flex;
+  
+  top: 1186px;
+  left:1040px;
+
+  // background-color: #DCDCDC;
+  // border-radius: 10px;
+  // border: 0.5px solid @whiteColor4;
+  transition: 0.5s all;
+  font-weight: 100;
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+.back{
+  top: 1019px;
+  left: 760px;
+  z-index:0;
+  position: absolute;
+  height: 256px;
+  width: 256px;
+  background-color:rgba(20, 23, 24, 0.8);
+  // background-color:white;
+  box-shadow: 0 2px 12px 0 @blackColor;
+  border: 0;
+}

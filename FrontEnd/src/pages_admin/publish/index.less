@@ -1,0 +1,118 @@
+@import "@/common/color.less";
+
+// .el-main{
+//   width: 1200px;
+//   height: 1900px;
+//   position: absolute;
+//   // left:10px;
+// }
+
+.el-main{
+  position:absolute;
+  width:1400px;
+  height:900px;
+  left:400px;
+  top:50px;
+  
+}
+
+.title-input{
+  position:relative;
+  height: 50px;
+  margin-bottom: 40px;
+  width : 50%;
+  outline: none;
+  background-color: #DCDCDC;
+  border: 0.5px solid @whiteColor4;
+  border-radius: 5px;
+  padding: 10px 0 10px 30px;
+  transition: 0.5s all;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: black;
+  &:hover {
+        border-color: @whiteColor;
+  }
+}
+
+
+.tags-input{
+  &::-webkit-input-placeholder { 
+    
+    color: rgba(255,255,255, 0.68);
+    text-align: center;
+    height: 50px;
+    font-size:20px;
+}
+  position:absolute;
+  height: 50px;
+  margin-bottom: 20px;
+  width : 25%;
+  left: 300px;
+  top:942px;
+
+  background-color:transparent;
+  box-shadow: 0 2px 12px 0 @blackColor;
+
+  border: 0;
+  transition: 0.5s all;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: white;
+  &:hover {
+        border-color: @whiteColor;
+  }
+}
+
+
+
+.mavonEditor {
+  position:relative;
+  background-color: transparent;
+  // margin: auto;
+  width: 100%;
+  height: 700px;
+  margin-bottom: 40px;
+}
+
+
+
+
+.desc{
+  position: absolute;
+  height: 310px;
+  margin-bottom: 40px;
+  width : 48%;
+  display: flex;
+  
+  top: 1020px;
+  
+
+  background-color: rgba(20, 23, 24, 0.8);
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 12px 12px 0 @blackColor;
+  transition: 0.5s all;
+  font-weight: 100;
+  font-size: 1.3rem;
+  color: rgba(255,255,255, 0.9);
+  &::-webkit-input-placeholder { 
+    
+    color: rgba(255,255,255, 0.68);
+    // text-align: center;
+    height: 50px;
+    font-size:20px;
+}
+ 
+}
+
+
+
+
+
+.el-main::-webkit-scrollbar {
+  scrollbar-width: none;
+}
+.el-main::-webkit-scrollbar {
+display: none;
+}

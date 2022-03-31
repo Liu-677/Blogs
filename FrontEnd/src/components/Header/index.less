@@ -1,0 +1,313 @@
+@import "@/common/color.less";
+
+
+.popContainer{
+  z-index:999;
+  position: fixed;
+  // border: transparent;
+  padding:0;
+  margin:0;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  
+  
+  .login{
+    // filter:blur(2px);
+    background:rgba(0, 0, 0, 0.65);
+    
+  }
+  .loginPart{
+    position:absolute;
+    top:50%;
+    left:50%;
+    /*顶和高同时设置50%实现的是同时水平垂直居中效果*/
+    transform:translate(-50%,-50%);
+    /*实现块元素百分比下居中*/
+    width:450px;
+    padding:50px;
+    background: rgba(0,0,0,0.7);
+    /*背景颜色为黑色，透明度为0.8*/
+    box-sizing:border-box;
+    /*box-sizing设置盒子模型的解析模式为怪异盒模型，
+    将border和padding划归到width范围内*/
+    box-shadow: 0px 15px 25px rgba(0,0,0,.5);
+    /*边框阴影  水平阴影0 垂直阴影15px 模糊25px 颜色黑色透明度0.5*/
+    border-radius:15px;
+    /*边框圆角，四个角均为15px*/
+  }
+
+  .loginPart .loginTitle{
+    font-weight: 100;
+    margin:0 0 30px;
+    padding:0;
+    color: rgba(255, 255, 255, 0.979);
+    text-align:center;
+    /*文字居中*/
+  }
+  .loginPart .inputbox{
+    position: relative;
+  }
+  .loginPart .inputElement input{
+    width: 100%;
+    padding:10px 0;
+    font-size:16px;
+    color:#fff;
+    letter-spacing: 1px;
+    /*字符间的间距1px*/
+    margin-bottom: 30px;
+    border:none;
+    border-bottom: 1px solid #fff;
+    outline:none;
+    /*outline用于绘制元素周围的线
+    outline：none在这里用途是将输入框的边框的线条使其消失*/
+    background: transparent;
+    /*背景颜色为透明*/
+  }
+  .loginPart .CancelBtn{
+    position: relative;
+    left: 115px;
+  }
+  .loginPart .LoginlBtn{
+    position: relative;
+    left: 75px;
+  }
+
+}
+
+.topbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .loginButton {
+    @media (max-width: 992px) {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+    }
+    position: relative;
+    width: 60px;
+    height: 60px;
+    left: 40px;
+    border-radius: 60px;
+    border: 0.5px solid @whiteColor4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all;
+    margin: 0 0 0 20px;
+    &:hover {
+      border-color: @whiteColor;
+      cursor: pointer;
+      
+    }
+    .logo-text {
+      color: @whiteColor;
+      @media (max-width: 992px) {
+        font-size: 16px;
+      }
+      font-size: 24px;
+      color: @whiteColor4;
+      transition: 0.5s all;
+    }
+  }
+  .menu {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .menu-item {
+      margin: 0px 30px;
+    }
+  }
+  .search {
+    position: relative;
+    .iconsearch {
+      position: absolute;
+      color: @whiteColor;
+      top: 50%-30px;
+      left: 110px;
+    }
+    .search-input {
+      @media (min-width: 992px) {
+        width: 200px;
+      }
+      margin: 0 100px;
+      outline: none;
+      background-color: transparent;
+      border: 0.5px solid @whiteColor4;
+      border-radius: 5px;
+      padding: 10px 0 10px 30px;
+      transition: 0.5s all;
+      font-weight: 100;
+      font-size: 0.8rem;
+      color: @whiteColor;
+      &:hover {
+        border-color: @whiteColor;
+      }
+    }
+  }
+  .iconlanguage {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    &:hover {
+      color: @whiteColor;
+      cursor: pointer;
+    }
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    color: @whiteColor6;
+    transition: 0.5s all;
+  }
+  .link {
+    position: relative;
+    color: @whiteColor6;
+    font-weight: 100;
+    transition: 0.5s all;
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 0px;
+      width: 0px;
+      height: 1px;
+      background-color: @whiteColor4;
+      transition: 0.5s all;
+    }
+    &:hover {
+      cursor: pointer;
+      color: @whiteColor;
+      &:after {
+        background-color: @whiteColor;
+        width: 100%;
+      }
+    }
+  }
+  .mobile-nav {
+    @media (min-width: 992px) {
+      display: none;
+      width: 60px;
+      height: 60px;
+    }
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    border: 0.5px solid @whiteColor4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all;
+    margin: 0 20px 0 0;
+    .iconnav {
+      @media (max-width: 992px) {
+        font-size: 16px;
+      }
+      font-size: 24px;
+      color: @whiteColor4;
+    }
+    &:hover {
+      border-color: @whiteColor;
+      cursor: pointer;
+      .iconnav {
+        color: @whiteColor;
+      }
+    }
+  }
+}
+.mobile-nav-item {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: @backgroundColor;
+  box-shadow: 0 5px 20px @blackColor;
+  transform-origin: 0 0;
+  .header-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconback {
+      color: @whiteColor;
+      font-size: 2.5rem;
+      display: block;
+      margin: 10px 0 0 10px;
+    }
+    .iconlanguage {
+      color: @whiteColor;
+      font-size: 2.5rem;
+      display: block;
+      margin: 10px 10px 0 0;
+    }
+  }
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 100;
+    color: @whiteColor;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      overflow: hidden;
+      border: 1px solid @whiteColor;
+      .avatar-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .name {
+      margin-top: 10px;
+    }
+    .mail {
+      color: @whiteColor6;
+      font-size: 0.8rem;
+      margin: 3px 0 10px 0;
+    }
+    .statistics {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+      color: @whiteColor6;
+    }
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: @whiteColor;
+  }
+  .nav-menu {
+    color: @whiteColor6;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    .nav-menu-item {
+      padding: 15px 0px;
+      i{
+        font-style: normal;
+      }
+    }
+  }
+}
